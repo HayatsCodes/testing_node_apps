@@ -1,5 +1,5 @@
 const express = require('express');
 
-const bookRoute = express.Route();
+const bookRoute = express.Router();
 
-bookRoute.get('/api/books');
+bookRoute.get('/api/books', httpGetBook);
