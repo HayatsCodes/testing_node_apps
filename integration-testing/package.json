@@ -8,6 +8,7 @@
     "start": "node index",
     "dev": "nodemon index"
   },
+  "jest"
   "keywords": [],
   "author": "",
   "license": "ISC",
