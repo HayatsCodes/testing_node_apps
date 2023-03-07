@@ -8,7 +8,9 @@
     "start": "node index",
     "dev": "nodemon index"
   },
-  "jest"
+  "jest": {
+    "modulePathIgnorePattern": "books.json"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
