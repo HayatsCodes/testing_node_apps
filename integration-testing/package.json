@@ -9,7 +9,7 @@
     "dev": "nodemon index"
   },
   "jest": {
-    "modulePathIgnorePattern": "books.json"
+    "modulePathIgnorePatterns": ["books.json"]
   },
   "keywords": [],
   "author": "",
