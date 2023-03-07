@@ -5,7 +5,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use('/', bookRoute);
+app.use('/api/books', bookRoute);
 
 const port = 8080;
 
