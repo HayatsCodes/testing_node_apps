@@ -17,8 +17,8 @@ describe('Test example', () => {
             })
     }, 10000);
     
-    test('POST /send' (done) => {
+    test('POST /send', (done) => {
         request(app)
-        
+            .post('/send')
     }, 10000);
 });
