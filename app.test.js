@@ -12,7 +12,8 @@ describe('Test example', () => {
                 res.body.data[0].email = 'test@example.com';
             })
             .end((err, res) => {
-                if (err) return 
+                if (err) return done(err);
+                return done();
             })
     });
 });
