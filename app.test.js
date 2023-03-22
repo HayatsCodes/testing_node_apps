@@ -1,6 +1,8 @@
 const request = require("supertest");
 const app = require("./app");
 
+let elementId = 0;
+
 describe('Test example', () => {
     test('GET /', (done) => {
         request(app)
