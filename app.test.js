@@ -50,8 +50,9 @@ describe('Test example', () => {
         .expect((res) => {
                 res.body.data.length = 2;
                 res.body.data[0].email = "test@example.com";
-                res.body.data[1].id = ele;
+                res.body.data[1].id = elementId;
                 res.body.data[1].email = "hayatscodes@gmail.com";
         })
+        .end((err, res) => )
     }, 10000)
 });
