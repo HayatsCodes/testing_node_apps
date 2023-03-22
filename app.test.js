@@ -41,6 +41,6 @@ describe('Test example', () => {
 
     test('PUT /update/:id', (done) => {
         request(app)
-        .
+        .put(`/update/:${elementId}`)
     }, 10000)
 });
