@@ -21,7 +21,10 @@ describe('Test example', () => {
         request(app)
             .post('/send')
             .expect('Content-Type', /json/)
-            .send
+            .send({
+                email: 'francisco@example.com',
+            })
+            .expect(201)
             .expect((req) => {
                 req.body.data.id =
             })
