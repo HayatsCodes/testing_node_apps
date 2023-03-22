@@ -7,6 +7,9 @@ describe('Test example', () => {
             .get('/')
             .expect('Content-Type', /json/)
             .expect(200)
-            
+            .expect((res) => {
+                res.body.data.length = 1;
+                res.bo
+            })
     });
 });
