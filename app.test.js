@@ -38,4 +38,6 @@ describe('Test example', () => {
                 return done();
               });
     }, 10000);
+
+    test('PUT /update/:id', (done))
 });
