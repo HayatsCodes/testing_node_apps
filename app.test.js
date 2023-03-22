@@ -9,7 +9,10 @@ describe('Test example', () => {
             .expect(200)
             .expect((res) => {
                 res.body.data.length = 1;
-                res.bo
+                res.body.data[0].email = 'test@example.com';
+            })
+            .end((err, res) => {
+                if (err) return 
             })
     });
 });
