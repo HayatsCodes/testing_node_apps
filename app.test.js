@@ -29,6 +29,7 @@ describe('Test example', () => {
                 res.body.data.length = 2;
                 res.body.data[0].email = "test@example.com";
                 res.body.data[1].email = "francisco@example.com";
-              });
+              })
+              
     }, 10000);
 });
