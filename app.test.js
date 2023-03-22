@@ -53,6 +53,9 @@ describe('Test example', () => {
                 res.body.data[1].id = elementId;
                 res.body.data[1].email = "hayatscodes@gmail.com";
         })
-        .end((err, res) => )
+        .end((err, res) => {
+            if (err) return done(err);
+            return done();
+        })
     }, 10000)
 });
