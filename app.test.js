@@ -7,6 +7,6 @@ describe('Test example', () => {
             .get('/')
             .expect('Content-Type', /json/)
             .expect(200)
-            done();
+            
     });
 });
