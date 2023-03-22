@@ -20,5 +20,7 @@ describe('Test example', () => {
     test('POST /send', (done) => {
         request(app)
             .post('/send')
+            .expect('Content-Type', /json/)
+            .expect()
     }, 10000);
 });
