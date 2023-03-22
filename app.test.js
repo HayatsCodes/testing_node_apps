@@ -21,6 +21,8 @@ describe('Test example', () => {
         request(app)
             .post('/send')
             .expect('Content-Type', /json/)
-            .expect()
+            .expect((req) => {
+                req.body.data.id =
+            })
     }, 10000);
 });
