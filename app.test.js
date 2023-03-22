@@ -2,7 +2,7 @@ const request = require("supertest");
 const app = require("./app");
 
 describe('Test example', () => {
-    test('Get /', (done) => {
+    test('GET /', (done) => {
         request(app)
             .get('/')
             .expect('Content-Type', /json/)
@@ -17,4 +17,5 @@ describe('Test example', () => {
             })
     }, 10000);
     
+    test('POST /')
 });
