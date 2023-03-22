@@ -46,6 +46,7 @@ describe('Test example', () => {
         .send({
             email: 'hayatscodes@gmail.com'
         })
+        .expect(200)
         .expect((res) => {
                 res.body.data.length = 2;
                 res.body.data[0].email = "test@example.com";
