@@ -42,6 +42,10 @@ describe('Test example', () => {
     test('PUT /update/:id', (done) => {
         request(app)
         .put(`/update/:${elementId}`)
-        .expect('Content')
+        .expect('Content-Type', /json/)
+        .send({
+            email: 'hayatscodes@gmail.com'
+        })
+        .expect()
     }, 10000)
 });
