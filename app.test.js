@@ -15,5 +15,5 @@ describe('Test example', () => {
                 if (err) return done(err);
                 return done();
             })
-    });
+    }, );
 });
