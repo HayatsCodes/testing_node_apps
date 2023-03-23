@@ -27,4 +27,3 @@ const createProduct = async (req, res) => {
       }
 }
 
-const
