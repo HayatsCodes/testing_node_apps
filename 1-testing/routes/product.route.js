@@ -8,4 +8,6 @@ const {
   deleteProduct,
 } = require("../controllers/product.controller");
 
-const router = expres
+const router = express.Router();
+
+router.get('/products', getProducts)
