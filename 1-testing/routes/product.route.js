@@ -10,4 +10,5 @@ const {
 
 const router = express.Router();
 
-router.get('/products', getProducts)
+router.get('/', getProducts)
+router.get('/', getProducts)
