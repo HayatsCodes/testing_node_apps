@@ -10,4 +10,6 @@ app.get("/", (req, res) => {
     res.status(200).json({ alive: "True" });
   });
 
-  
+app.use("/api/products", ProductRoutes);
+
+module.exports = app;
