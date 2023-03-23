@@ -10,5 +10,7 @@ const {
 
 const router = express.Router();
 
-router.get('/', getProducts)
-router.get('/', getProducts)
+router.get('/', getProducts);
+router.get('/:id', getProduct);
+router.post('/', createProduct);
+router.post('/', createProduct);
