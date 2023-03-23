@@ -40,7 +40,7 @@ describe('Test example', () => {
     }, 10000);
 
     test('PUT /update/:id', (done) => {
-        request(app)
+        cons t res request(app)
         .put(`/update/:${elementId}`)
         .expect('Content-Type', /json/)
         .send({
