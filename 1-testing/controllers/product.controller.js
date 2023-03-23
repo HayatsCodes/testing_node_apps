@@ -9,12 +9,17 @@ const getProducts = async (req, res) => {
     }
 }
 
-const getProduct = async(req, res) => {
+const getProduct = async (req, res) => {
     try {
         const product = await Product.findById(req.params.id);
         res.status(200).json(product);
     } catch (err) {
-        
+        res.status(500).json(error);
     }
+}
+
+const createProduct = async (req, res) => {
+    try {
+        const product = await Product
     }
-   
+}
