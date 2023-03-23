@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const app = require("./app");
 const PORT = process.env.PORT
 
+
 require("dotenv").config();
 
 /* Connecting to the database and then starting the server. */
