@@ -24,11 +24,16 @@ const createProduct = async (req, res) => {
         res.status(201).json(product);
     } catch (error) {
         res.status(500).json(error);
-      }
+    }
 }
 
 const updateProduct = async (req, res) => {
     try {
-        const product = await Product.findByIdAndUpdate(req.params.id, rq.body)
+        const product = await Product.findByIdAndUpdate(req.params.id, req.body, {
+            new: true,
+        });
+        res.status(200).json(product);
+    } catch (error) {
+        res.status(500).json(error);
     }
 }
