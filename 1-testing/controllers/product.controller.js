@@ -27,4 +27,8 @@ const createProduct = async (req, res) => {
       }
 }
 
-const 
+const updateProduct = async (req, res) => {
+    try {
+        const product = await Product.findByIdAndUpdate(req.params.id, rq.body)
+    }
+}
