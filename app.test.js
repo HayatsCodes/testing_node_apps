@@ -48,11 +48,12 @@ describe('Test example', () => {
         expect('Content-Type', /json/)
         expect(response.headers["Content-Type"]).toMatch(/json/);
         expect(response.status).toEqual(200)
-        expect()
-                res.body.data.length = 2;
-                res.body.data[0].email = "test@example.com";
-                res.body.data[1].id = elementId;
-                res.body.data[1].email = "hayatscodes@gmail.com";
+        expect(response.body.data.length).toEqual(2)
+        expect(response.body.data[0].email).toEqual(2)
+                response.body.data.length = 2;
+                response.body.data[0].email = "test@example.com";
+                response.body.data[1].id = elementId;
+                response.body.data[1].email = "hayatscodes@gmail.com";
         })
         .end((err, res) => {
             if (err) return done(err);
