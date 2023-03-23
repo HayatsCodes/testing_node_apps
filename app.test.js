@@ -42,11 +42,11 @@ describe('Test example', () => {
     test('PUT /update/:id', (done) => {
         request(app)
         .put(`/update/:${elementId}`)
-        .expect('Content-Type', /json/)
         .send({
             email: 'hayatscodes@gmail.com'
         })
         .expect(200)
+        .expect('Content-Type', /json/)
         .expect((res) => {
                 res.body.data.length = 2;
                 res.body.data[0].email = "test@example.com";
