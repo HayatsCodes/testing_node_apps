@@ -39,23 +39,23 @@ describe('Test example', () => {
               });
     }, 10000);
 
-    test('PUT /update/:id', (done) => {
+    test("PUT /update/:id", (done) => {
         request(app)
-        .put(`/update/:${elementId}`)
-        .send({
-            email: 'hayatscodes@gmail.com'
-        })
-        .expect(200)
-        .expect('Content-Type', /json/)
-        .expect((res) => {
-                res.body.data.length = 2;
-                res.body.data[0].email = "test@example.com";
-                res.body.data[1].id = elementId;
-                res.body.data[1].email = "hayatscodes@gmail.com";
-        })
-        .end((err, res) => {
+          .put(`/update/${elementId}`)
+          .expect("Content-Type", /json/)
+          .send({
+            email: "mendes@example.com",
+          })
+          .expect(200)
+          .expect((res) => {
+            res.body.data.length = 2;
+            res.body.data[0].email = "test@example.com";
+            res.body.data[1].id = elementId;
+            res.body.data[1].email = "mendes@example.com";
+          })
+          .end((err, res) => {
             if (err) return done(err);
-            return done()
-        })
-    }, 10000)
+            return done();
+          });
+      });
 });
