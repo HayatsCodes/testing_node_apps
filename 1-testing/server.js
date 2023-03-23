@@ -9,7 +9,7 @@ mongoose
   .connection.on('open', () => {
     console.log('Database Ready!');
   })
-  .connect(process.env.MONGODB_URI)
+  .connect(process.env.MONGO_URL)
   .then(() => {
     app.listen(PORT, console.log("Server started on port 5000"));
   })
