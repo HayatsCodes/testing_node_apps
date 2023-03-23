@@ -41,11 +41,14 @@ describe('Test example', () => {
 
     test('PUT /update/:id', async (done) => {
         const res = await request(app)
-        .put(`/update/:${elementId}`);
-        expect('Content-Type', /json/)
+        .put(`/update/:${elementId}`)
         .send({
             email: 'hayatscodes@gmail.com'
         })
+        expect('Content-Type', /json/)
+        expect(response.headers["Content-Type"]).toMatch(/json/);
+        expect(response.status).toEqual(200);
+       
         .expect(200)
         .expect((res) => {
                 res.body.data.length = 2;
