@@ -57,5 +57,5 @@ describe('Test example', () => {
             if (err) return done(err);
             return done();
         })
-    }, 10000)
+    }, 10000);
 });
