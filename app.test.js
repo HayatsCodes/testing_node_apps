@@ -62,5 +62,13 @@ describe('Test example', () => {
     test('DELETE destroy/id', (done) => {
         request(app)
         .delete(`/destroy/${elementId}`)
+        .expect('Content-Type', /json/)
+        .expect(200)
+        .expect((res) => {
+            res.body.data.length = 1;
+            res.body.data[0].email = "test@example.com";
+            res.body.data[1].id = elementId;
+            res.body.data[1].email = "hayatscodes@gmail.com";
+    })
     })
 });
