@@ -51,11 +51,7 @@ describe('Test example', () => {
         expect(response.body.data.length).toEqual(2)
         expect(response.body.data[0].email).toEqual('test@example.com')
         expect(response.body.data[1].id).toEqual(elementId)
-        expect(response.body.data[1].email).toEqual(hayatscodes@gmail.com)
-                response.body.data.length = 2;
-                response.body.data[0].email = "test@example.com";
-                response.body.data[1].id = elementId;
-                response.body.data[1].email = "hayatscodes@gmail.com";
+        expect(response.body.data[1].email).toEqual('hayatscodes@gmail.com')
         })
         .end((err, res) => {
             if (err) return done(err);
