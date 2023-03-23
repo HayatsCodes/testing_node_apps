@@ -10,5 +10,11 @@ const getProducts = async (req, res) => {
 }
 
 const getProduct = async(req, res) => {
-    const product = await Pro
-}
+    try {
+        const product = await Product.findById(req.params.id);
+        res.status(200).json(product);
+    } catch (err) {
+        
+    }
+    }
+   
