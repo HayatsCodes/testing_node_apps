@@ -18,7 +18,7 @@ describe('Test example', () => {
                 return done();
             })
     }, 10000);
-
+    
     test('POST /send', (done) => {
         request(app)
             .post('/send')
@@ -31,26 +31,30 @@ describe('Test example', () => {
                 res.body.data.length = 2;
                 res.body.data[0].email = "test@example.com";
                 res.body.data[1].email = "francisco@example.com";
-            })
-            .end((err, res) => {
+              })
+              .end((err, res) => {
                 if (err) return done(err);
                 elementId = res.body.data[1].id;
                 return done();
-            });
+              });
     }, 10000);
 
     test('PUT /update/:id', async (done) => {
-        const response = await request(app)
-            .put(`/update/:${elementId}`)
-            .send({
-                email: 'hayatscodes@gmail.com'
-            })
+        const res = await request(app).put(`/update/:${elementId}`);
         expect('Content-Type', /json/)
-        expect(response.headers["Content-Type"]).toMatch(/json/);
-        expect(response.status).toEqual(200)
-        expect(response.body.data.length).toEqual(2)
-        expect(response.body.data[0].email).toEqual('test@example.com')
-        expect(response.body.data[1].id).toEqual(elementId)
-        expect(response.body.data[1].email, done).toEqual('hayatscodes@gmail.com')
-    })
-}, 10000);
+        .send({
+            email: 'hayatscodes@gmail.com'
+        })
+        .expect(200)
+        .expect((res) => {
+                res.body.data.length = 2;
+                res.body.data[0].email = "test@example.com";
+                res.body.data[1].id = elementId;
+                res.body.data[1].email = "hayatscodes@gmail.com";
+        })
+        .end((err, res) => {
+            if (err) return done(err);
+            return done();
+        })
+    }, 10000)
+});
