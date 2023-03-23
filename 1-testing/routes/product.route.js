@@ -7,3 +7,5 @@ const {
   updateProduct,
   deleteProduct,
 } = require("../controllers/product.controller");
+
+const router = expres
