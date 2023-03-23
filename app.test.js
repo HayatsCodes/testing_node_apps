@@ -49,7 +49,9 @@ describe('Test example', () => {
         expect(response.headers["Content-Type"]).toMatch(/json/);
         expect(response.status).toEqual(200)
         expect(response.body.data.length).toEqual(2)
-        expect(response.body.data[0].email).toEqual(2)
+        expect(response.body.data[0].email).toEqual('test@example.com')
+        expect(response.body.data[1].id).toEqual(elementId)
+        expect(response.body.data[1].email).toEqual(hayatscodes@gmail.com)
                 response.body.data.length = 2;
                 response.body.data[0].email = "test@example.com";
                 response.body.data[1].id = elementId;
