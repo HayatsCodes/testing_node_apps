@@ -58,4 +58,6 @@ describe('Test example', () => {
             return done();
         });
     }, 10000)
+
+    test()
 });
