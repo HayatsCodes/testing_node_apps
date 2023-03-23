@@ -39,7 +39,7 @@ describe('Test example', () => {
               });
     }, 10000);
 
-    test('PUT /update/:id', (done) => {
+    test('PUT /update/id', (done) => {
         request(app)
         .put(`/update/${elementId}`)
         .expect('Content-Type', /json/)
@@ -59,5 +59,7 @@ describe('Test example', () => {
         });
     }, 10000)
 
-    test()
+    test('DELETE destroy/id', (done) => {
+        request(app)
+    })
 });
