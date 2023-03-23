@@ -61,5 +61,6 @@ describe('Test example', () => {
 
     test('DELETE destroy/id', (done) => {
         request(app)
+        .delete(`/destroy/${elementId}`)
     })
 });
