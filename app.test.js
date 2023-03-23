@@ -40,7 +40,8 @@ describe('Test example', () => {
     }, 10000);
 
     test('PUT /update/:id', async (done) => {
-        const res = await request(app).put(`/update/:${elementId}`);
+        const res = await request(app)
+        .put(`/update/:${elementId}`);
         expect('Content-Type', /json/)
         .send({
             email: 'hayatscodes@gmail.com'
