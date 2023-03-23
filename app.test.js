@@ -40,17 +40,15 @@ describe('Test example', () => {
     }, 10000);
 
     test('PUT /update/:id', async (done) => {
-        const res = await request(app)
+        const response = await request(app)
         .put(`/update/:${elementId}`)
         .send({
             email: 'hayatscodes@gmail.com'
         })
         expect('Content-Type', /json/)
         expect(response.headers["Content-Type"]).toMatch(/json/);
-        expect(response.status).toEqual(200);
-       
-        .expect(200)
-        .expect((res) => {
+        expect(response.status).toEqual(200)
+        expect()
                 res.body.data.length = 2;
                 res.body.data[0].email = "test@example.com";
                 res.body.data[1].id = elementId;
