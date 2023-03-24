@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
 const app = require("./app");
+
 const PORT = process.env.PORT;
 const MONGO_URL = process.env.MONGO_URL;
 const options = {
@@ -8,8 +9,6 @@ const options = {
   useUnifiedTopology: true,
 };
 
-
-console.log(process.env.MONGO_URL);
 
 /* Connecting to the database and then starting the server. */
 mongoose
