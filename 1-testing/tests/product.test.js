@@ -35,6 +35,7 @@ describe('GET /api/products/:id', () => {
         expect(res.body.price).toBe(10000000);
     });
 
+});
 
 describe('POST /api/products', () => {
     it('should create a product', async () => {
@@ -45,8 +46,6 @@ describe('POST /api/products', () => {
             description: "x2 Improved",
           });
           expect(res.statusCode).toBe(201);
-          expect(res.body.name).toBe("Product 2");
-
-    })
-})
+          expect(res.body.name).toBe("CarX-2");
+    });
 });
