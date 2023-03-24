@@ -30,7 +30,7 @@ describe('GET /api/products/:id', () => {
         const res = await request(app).get(`/api/products/${productId}`);
         expect(res.statusCode).toBe(200);
         expect(res.body.length).toBe(1);
-        expect(res.body[0].name).toBe('CarX');
+        expect(res.body.name).toBe('CarX');
         expect(res.body[0].price).toBe(10000000);
     })
 })
