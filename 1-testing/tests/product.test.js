@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const request = require("supertest");
 require('dotenv').config();
-
+console.log(process.env.MONGODB_URL);
 const app = require('../app');
 
 
