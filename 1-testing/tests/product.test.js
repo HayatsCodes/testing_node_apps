@@ -62,3 +62,9 @@ describe('PATCH /api/products/:id',  () => {
           expect(res.body.description).toBe("Standard");
     });
 });
+
+describe('DELETE /api/products/:id', () => {
+    it('should delete a product', async () => {
+        
+    })
+})
