@@ -51,5 +51,11 @@ describe('POST /api/products', () => {
 });
 
 describe('PATCH /api/products/:id',  () => {
-    it ('should update a product', )
+    it ('should update a product', async () => {
+        const res = await request(app).post('/api/products/')
+        .send({
+            name: "CarX-1",
+            description: "Standard",
+          });
+    });
 });
