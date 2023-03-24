@@ -50,4 +50,6 @@ describe('POST /api/products', () => {
     });
 });
 
-describe('PUT /api/products/:id')
+describe('PATCH /api/products/:id',  () => {
+    it ('should update a product', )
+});
