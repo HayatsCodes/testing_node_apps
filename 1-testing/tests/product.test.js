@@ -22,7 +22,7 @@ describe('GET /api/products', () => {
         expect(res.body[0].name).toBe('CarX');
         expect(res.body[0].price).toBe(10000000);
         productId = res.body[0]._id
-    })
+    });
 });
 
 describe('GET /api/products/:id', () => {
@@ -31,6 +31,6 @@ describe('GET /api/products/:id', () => {
         expect(res.statusCode).toBe(200);
         expect(res.body.length).toBe(1);
         expect(res.body.name).toBe('CarX');
-        expect(res.body[0].price).toBe(10000000);
-    })
-})
+        expect(res.body.price).toBe(10000000);
+    });
+});
