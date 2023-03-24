@@ -37,6 +37,8 @@ describe('GET /api/products/:id', () => {
 
 
 describe('POST /api/products', () => {
-    it('')
+    it('should create a product', async () => {
+        
+    })
 })
 });
