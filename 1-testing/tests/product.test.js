@@ -26,7 +26,7 @@ describe('GET /api/products', () => {
 });
 
 describe('GET /api/products/:id', () => {
-    it('should return a product with the id', async () => {
+    it('should return a product', async () => {
         const res = await request(app).get(`/api/products/${productId}`);
         expect(res.statusCode).toBe(200);
         expect(res.length).toBe(1);
