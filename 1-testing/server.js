@@ -9,6 +9,9 @@ const options = {
   useUnifiedTopology: true,
 };
 
+mongoose.connection.once('open', () => {
+  console.log('MongoDB Ready!');
+})
 
 /* Connecting to the database and then starting the server. */
 mongoose
