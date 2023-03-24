@@ -34,4 +34,9 @@ describe('GET /api/products/:id', () => {
         expect(res.body.name).toBe('CarX');
         expect(res.body.price).toBe(10000000);
     });
+
+
+describe('POST /api/products', () => {
+    it('')
+})
 });
