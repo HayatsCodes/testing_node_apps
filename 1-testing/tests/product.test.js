@@ -57,7 +57,8 @@ describe('PATCH /api/products/:id',  () => {
             name: "CarX-1",
             description: "Standard",
           });
-          expect(res.statusCode).toBe(201);
+          expect(res.statusCode).toBe(200);
           expect(res.body.name).toBe("CarX-1");
+          expect(res.body.description).toBe("Standard");
     });
 });
