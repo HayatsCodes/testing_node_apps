@@ -52,10 +52,12 @@ describe('POST /api/products', () => {
 
 describe('PATCH /api/products/:id',  () => {
     it ('should update a product', async () => {
-        const res = await request(app).post('/api/products/')
+        const res = await request(app).patch(`/api/products/${productId}`)
         .send({
             name: "CarX-1",
             description: "Standard",
           });
+          expect(res.statusCode).toBe(201);
+          expect(res.body.name).toBe("CarX-1");
     });
 });
