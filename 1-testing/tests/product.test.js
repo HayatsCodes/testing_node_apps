@@ -21,6 +21,7 @@ describe('GET /api/products', () => {
         expect(res.body.length).toBeGreaterThan(0);
         expect(res.body[0].name).toBe('CarX');
         expect(res.body[0].price).toBe(10000000);
+        
     })
 });
 
