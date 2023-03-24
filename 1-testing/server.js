@@ -9,7 +9,7 @@ const options = {
 
 require("dotenv").config();
 
-console
+console.log(process.env);
 
 /* Connecting to the database and then starting the server. */
 mongoose
