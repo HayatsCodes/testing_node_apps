@@ -11,3 +11,5 @@ beforeEach(async () => {
 afterEach(async () => {
     await mongoose.connection.close();
 });
+
+describe('GET /api/products')
