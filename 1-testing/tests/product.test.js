@@ -49,3 +49,5 @@ describe('POST /api/products', () => {
           expect(res.body.name).toBe("CarX-2");
     });
 });
+
+describe('PUT /api/products/:id')
