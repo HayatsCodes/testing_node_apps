@@ -4,7 +4,7 @@ const app = require('../app');
 
 require('dotenv').config();
 
-const 
+let productId = 0;
 
 beforeEach(async () => {
     await mongoose.connect(process.env.MONGO_URL)
