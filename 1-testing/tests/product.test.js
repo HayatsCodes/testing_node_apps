@@ -17,6 +17,6 @@ describe('GET /api/products', () => {
         const res = await request(app).get("/api/products");
         expect(res.statusCode).toBe(200);
         expect(res.body.length).toBeGreaterThan(0);
-        expect(res.body.name).toBe('CarX');
+        expect(res.body[0].name).toBe('CarX');
     })
 })
