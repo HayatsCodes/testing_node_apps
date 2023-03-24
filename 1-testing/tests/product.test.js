@@ -65,7 +65,7 @@ describe('PATCH /api/products/:id',  () => {
 
 describe('DELETE /api/products/:id', () => {
     it('should delete a product', async () => {
-        const res = await request(app).delete(`/api/products/${productId}`)
+        const res = await request(app).delete(`/api/products/${productId}`);
         expect(res.statusCode).toBe(200);
-    })
+    });
 })
