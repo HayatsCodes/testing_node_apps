@@ -39,7 +39,11 @@ describe('GET /api/products/:id', () => {
 describe('POST /api/products', () => {
     it('should create a product', async () => {
         const res = await request(app).post('/api/products/')
-        
+        .send({
+            name: "CarX-2",
+            price: 12500000,
+            description: "X2",
+          });
 
     })
 })
