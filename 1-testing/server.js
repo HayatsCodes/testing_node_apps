@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const morgan = require('morgan');
 require("dotenv").config();
 const app = require("./app");
 
@@ -8,6 +9,8 @@ const options = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 };
+
+
 
 mongoose.connection.once('open', () => {
   console.log('MongoDB Ready!');
