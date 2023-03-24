@@ -3,6 +3,8 @@ const morgan = require('morgan');
 require("dotenv").config();
 const app = require("./app");
 
+app.use(morgan('tiny'));
+
 const PORT = process.env.PORT;
 const MONGO_URL = process.env.MONGO_URL;
 const options = {
