@@ -1,12 +1,11 @@
 const mongoose = require("mongoose");
 const request = require("supertest");
-require('dotenv').config();
-console.log(process.env.MONGO_URL);
 const app = require('../app');
 
+require('dotenv').config();
 
 beforeEach(async () => {
-    await mongoose.connect(process.env.MONGODB_URL)
+    await mongoose.connect(process.env.MONGO_URL)
 });
 
 afterEach(async () => {
