@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 const app = require("./app");
 const PORT = process.env.PORT;
-const MONGO_URL = process.env.MONGO_URL
+const MONGO_URL = process.env.MONGO_URL;
 const options = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-}
+};
 
 require("dotenv").config();
 
