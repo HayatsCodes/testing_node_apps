@@ -38,7 +38,8 @@ describe('GET /api/products/:id', () => {
 
 describe('POST /api/products', () => {
     it('should create a product', async () => {
-        
+        const res = await request(app).post('/api/products/');
+
     })
 })
 });
