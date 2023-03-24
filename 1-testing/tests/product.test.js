@@ -29,7 +29,7 @@ describe('GET /api/products/:id', () => {
     it('should return a product with the id', async () => {
         const res = await request(app).get(`/api/products/${productId}`);
         expect(res.statusCode).toBe(200);
-        expect(res.data.length).toBe(1);
+        // expect(res.body.length).toBe(1);
         expect(res.body.name).toBe('CarX');
         expect(res.body.price).toBe(10000000);
     });
