@@ -4,6 +4,8 @@ const app = require('../app');
 
 require('dotenv').config();
 
+const 
+
 beforeEach(async () => {
     await mongoose.connect(process.env.MONGO_URL)
 });
@@ -22,4 +24,6 @@ describe('GET /api/products', () => {
     })
 });
 
-describe('GET /api/products/:id', ())
+describe('GET /api/products/:id', () => {
+    it('')
+})
