@@ -43,7 +43,7 @@ describe('POST /api/products', () => {
         .send({
             name: "CarX-2",
             price: 12500000,
-            description: "x2 Improved",
+            description: "Improved",
           });
           expect(res.statusCode).toBe(201);
           expect(res.body.name).toBe("CarX-2");
