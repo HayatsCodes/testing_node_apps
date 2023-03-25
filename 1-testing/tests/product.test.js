@@ -63,9 +63,9 @@ describe('PATCH /api/products/:id',  () => {
     });
 });
 
-// describe('DELETE /api/products/:id', () => {
-//     it('should delete a product', async () => {
-//         const res = await request(app).delete('/api/products/641e346fe7ad42de350c06cb');
-//         expect(res.statusCode).toBe(200);
-//     });
-// });
+describe('DELETE /api/products/:id', () => {
+    it('should delete a product', async () => {
+        const res = await request(app).delete('/api/products/641e346fe7ad42de350c06cb');
+        expect(res.statusCode).toBe(200);
+    });
+});
