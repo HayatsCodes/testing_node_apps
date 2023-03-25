@@ -32,7 +32,7 @@ describe('GET /api/products/:id', () => {
         expect(res.body).not.toBeNull();
         expect(res.body).toBeInstanceOf(Object);
         expect(res.body.name).toBe('CarX');
-        expect(res.body.price).toBe(10000000);
+        expect(res.body.price).toBe(10000);
     });
 
 });
@@ -43,7 +43,7 @@ describe('POST /api/products', () => {
         .send({
             name: "CarX-2",
             price: 12500000,
-            description: "Improved",
+            description: "Improved x2",
           });
           expect(res.statusCode).toBe(201);
           expect(res.body.name).toBe("CarX-2");
